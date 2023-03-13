@@ -14,9 +14,9 @@ This project requires JavaFX to run. Please ensure that JavaFX is installed on y
 
 3. Type the following command to run the application:
 
-`java --module-path /path/to/javafx/lib --add-modules=javafx.controls,javafx.fxml,javafx.graphics -jar RunwayRedeclaration.jar`
+   `java --module-path /path/to/javafx/lib --add-modules=javafx.controls,javafx.fxml,javafx.graphics -jar RunwayRedeclaration.jar`
 
-Replace `/path/to/javafx/lib` with the path to the directory containing the JavaFX runtime components on your system. This path will depend on the location where you installed JavaFX on your computer.
+   Replace `/path/to/javafx/lib` with the path to the directory containing the JavaFX runtime components on your system. This path will depend on the location where you installed JavaFX on your computer.
 
 4. Press Enter to run the command. The application should launch and you can now input the required data for runway redeclaration.
 
