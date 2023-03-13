@@ -2,6 +2,8 @@
 
 This project is designed to calculate the new runway parameters based on the user input for runway redeclaration. For the first increment, we have developed a working prototype that have predefined airport, runways and obstacles for users to perform calculation. The priority in this increment is to ensure the accuracy of calculation and result of calculation is being displayed in textual form. 
 
+Codes can be found in the 'code' folder, where it contains the src folder and an executable .jar file.
+
 ## Dependencies
 
 This project requires JavaFX to run. Please ensure that JavaFX is installed on your computer before running the application.
