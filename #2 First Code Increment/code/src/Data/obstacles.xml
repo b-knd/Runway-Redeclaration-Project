@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<obstacles>
+    <obstacle>
+        <name>Airbus A320</name>
+        <height>11</height>
+        <width>34</width>
+    </obstacle>
+    <obstacle>
+        <name>Boeing 737</name>
+        <height>12</height>
+        <width>35</width>
+    </obstacle>
+    <obstacle>
+        <name>Airbus A330</name>
+        <height>17</height>
+        <width>60</width>
+    </obstacle>
+    <obstacle>
+        <name>Boeing 747</name>
+        <height>19</height>
+        <width>69</width>
+    </obstacle>
+    <obstacle>
+        <name>Embraer E190</name>
+        <height>10</height>
+        <width>28</width>
+    </obstacle>
+</obstacles>
