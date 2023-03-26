@@ -24,4 +24,4 @@ This project requires JavaFX to run. Please ensure that JavaFX is installed on y
 
 Once the application is launched, you will see a form on the left hand side that you need to fill out either by selecting options or typing in values. Some menus have been disabled to ensure that the required information is selected before proceeding. Once all fields are completed, click on the "Perform Calculation" button to calculate the new runway parameters.
 
-The calculated results will be displayed in the middle and right section of the applicatiob in the form of breakdown and comparison of new and original runway parameters
+The calculated results will be displayed in the middle and right section of the application in the form of breakdown and comparison of new and original runway parameters
