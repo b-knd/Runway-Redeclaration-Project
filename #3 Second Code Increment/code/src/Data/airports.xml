@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<airports>
+ <airport>
+  <name>Heathrow Airport</name>
+  <physicalRunways>
+   <physicalRunway name="09L/27R">
+    <logicalRunway designator="09L" tora="3902.0" toda="3902.0" asda="3902.0" lda="3595.0" />
+    <logicalRunway designator="27R" tora="3884.0" toda="3962.0" asda="3884.0" lda="3884.0" />
+   </physicalRunway>
+   <physicalRunway name="09R/27L">
+    <logicalRunway designator="09R" tora="3660.0" toda="3660.0" asda="3660.0" lda="3353.0" />
+    <logicalRunway designator="27L" tora="3660.0" toda="3660.0" asda="3660.0" lda="3660.0" />
+   </physicalRunway>
+  </physicalRunways>
+ </airport>
+</airports>
+
+

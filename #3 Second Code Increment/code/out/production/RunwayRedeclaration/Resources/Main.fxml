@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ToggleButtonGroup?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vboxpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" style="-fx-font-family: Verdana;" text="Info">
+          <items>
+            <MenuItem fx:id="aboutProject" mnemonicParsing="false" onAction="#loadAboutProject" text="About Runway Project" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+      <Label alignment="CENTER" prefHeight="133.0" prefWidth="1400.0" text="RUNWAY REDECLARATION" textAlignment="CENTER">
+         <font>
+            <Font name="Verdana Bold" size="25.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </Label>
+      <SplitPane dividerPositions="0.19321428571428573, 0.7760714285714285" prefHeight="601.0" prefWidth="1400.0" style="-fx-border-color: rgb(244,244,244);" stylesheets="@Resources/CSS/MainStylesheet.css">
+         <items>
+            <AnchorPane prefHeight="692.0" prefWidth="261.0">
+               <children>
+                  <MenuButton id="airportMenu" fx:id="airportMenu" layoutX="20.0" layoutY="52.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="235.0" text="Select an Airport">
+                    <items>
+                    </items>
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </MenuButton>
+                  <MenuButton id="runwayMenu" fx:id="physicalRunwayMenu" disable="true" layoutX="20.0" layoutY="142.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="235.0" text="Select Physical Runway">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </MenuButton>
+                  <MenuButton fx:id="obstacleMenu" disable="true" layoutX="20.0" layoutY="236.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="235.0" text="Select an Obstacle">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </MenuButton>
+                  <Label fx:id="obstacleHeightLabel" layoutX="29.0" layoutY="286.0" text="Obstacle height:-">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="obstacleWidthLabel" layoutX="29.0" layoutY="315.0" text="Obstacle width:-">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="distFromThreshold" layoutX="29.0" layoutY="343.0" prefWidth="212.0" text="Distance From Threshold (m): ">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font></Label>
+                  <TextField fx:id="distanceThresholdTextField" disable="true" layoutX="20.0" layoutY="372.0" onAction="#checkDistFromThreshold" prefHeight="31.0" prefWidth="235.0" text="0">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font></TextField>
+                  <Label layoutX="29.0" layoutY="424.0" text="L/R from Centre Line: ">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Label>
+                  <ToggleButtonGroup fx:id="lrButtonGroup" disable="true" layoutX="169.0" layoutY="425.0" selectionType="SINGLE">
+                     <toggles>
+                        <RadioButton fx:id="leftDirButton" mnemonicParsing="false" onAction="#setLeftRightDirection" selected="true" text="L">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="rightDirButton" mnemonicParsing="false" onAction="#setLeftRightDirection" text="R">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </RadioButton>
+                     </toggles>
+                  </ToggleButtonGroup>
+                  <Label layoutX="29.0" layoutY="454.0" text="Distance from Centre Line (m): ">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="clDistTextField" disable="true" layoutX="20.0" layoutY="484.0" onAction="#checkDistFromCentreLine" prefHeight="31.0" prefWidth="235.0" text="0">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font></TextField>
+                  <Button fx:id="performCalculationButton" disable="true" layoutX="37.0" layoutY="539.0" mnemonicParsing="false" onAction="#performCalculation" prefHeight="35.0" text="Perform Recalculation">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" layoutX="20.0" layoutY="8.0" prefHeight="42.0" prefWidth="235.0" text="AIRPORT">
+                     <font>
+                        <Font name="Verdana Bold" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="20.0" layoutY="191.0" prefHeight="42.0" prefWidth="235.0" text="OBSTACLE">
+                     <font>
+                        <Font name="Verdana Bold" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="resetButton" layoutX="102.0" layoutY="597.0" mnemonicParsing="false" onAction="#handleReset" prefHeight="35.0" text="Reset">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" layoutX="20.0" layoutY="99.0" prefHeight="42.0" prefWidth="219.0" text="RUNWAY">
+                     <font>
+                        <Font name="Verdana Bold" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </AnchorPane>
+             <AnchorPane prefHeight="655.0" prefWidth="829.0">
+               <children>
+                  <TabPane fx:id="visualPane" layoutX="3.0" layoutY="-1.0" prefHeight="656.0" prefWidth="804.0" stylesheets="@Resources/CSS/MainStylesheet.css" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="topViewTab" style="-fx-font-family: Verdana;" text="Top-down View">
+                         <content>
+                            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                               <children>
+                                  <AnchorPane prefHeight="627.0" prefWidth="816.0" />
+                               </children>
+                            </AnchorPane>
+                         </content>
+                      </Tab>
+                      <Tab fx:id="sideViewTab" style="-fx-font-family: Verdana;" text="Side-on View">
+                           <content>
+                              <AnchorPane prefHeight="607.0" prefWidth="774.0">
+                                 <children>
+                                    <AnchorPane layoutX="6.0" prefHeight="627.0" prefWidth="804.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+            <AnchorPane fx:id="stripEndLabel" maxWidth="-Infinity" prefHeight="655.0" prefWidth="294.0">
+               <children>
+                  <Label fx:id="otherDetails" alignment="CENTER" layoutX="7.0" layoutY="387.0" prefHeight="56.0" prefWidth="271.0" text="OTHER DETAILS">
+                     <font>
+                        <Font name="Verdana Bold" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="newToraLabel1" layoutX="32.0" layoutY="495.0" text="Strip End (m)          = ">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="blastProtectionLabel" layoutX="32.0" layoutY="537.0" text="Blast Protection (m) = ">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="stripEndTextField" disable="true" layoutX="195.0" layoutY="489.0" onAction="#setStripEnd" prefHeight="31.0" prefWidth="80.0" text="0">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="blastProtectionField" disable="true" layoutX="194.0" layoutY="530.0" onAction="#setBlastProtection" prefHeight="31.0" prefWidth="80.0" text="0">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="calculationBreakdown" disable="true" layoutX="34.0" layoutY="592.0" mnemonicParsing="false" onAction="#showCalculationBreakdown" prefHeight="35.0" prefWidth="219.0" text="Calculation Breakdown">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="stripEndInfo" layoutX="2.0" layoutY="498.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="14.0" style="-fx-background-radius: 20px; -fx-label-padding: 0.3px;" text="?">
+                     <font>
+                        <Font name="Verdana" size="8.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="blastProtectionInfo" layoutX="2.0" layoutY="539.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="14.0" style="-fx-background-radius: 20px; -fx-label-padding: 0.3px;" text="?">
+                     <font>
+                        <Font name="Verdana" size="8.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="leftTableView" layoutX="28.0" layoutY="72.0" prefHeight="132.0" prefWidth="245.0" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244);">
+                    <columns>
+                      <TableColumn fx:id="parColumn1" editable="false" prefWidth="73.62646484375" sortable="false" style="-fx-font-size: 14px; -fx-font-family: Verdana;" text="L" />
+                      <TableColumn fx:id="originalCol1" editable="false" minWidth="3.9134521484375" prefWidth="75.824951171875" sortable="false" style="-fx-font-family: Verdana; -fx-font-size: 14px;" text="Original" />
+                        <TableColumn fx:id="revisedCol1" editable="false" prefWidth="90.62646484375" sortable="false" style="-fx-font-family: Verdana; -fx-font-size: 14px;" text="Revised" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="rightTableView" layoutX="27.0" layoutY="231.0" prefHeight="132.0" prefWidth="245.0" style="-fx-background-color: rgb(244,244,244); -fx-border-color: rgb(244,244,244);">
+                     <columns>
+                        <TableColumn fx:id="parColumn2" editable="false" prefWidth="74.5875244140625" sortable="false" style="-fx-font-size: 14px; -fx-font-family: Verdana;" text="R" />
+                        <TableColumn fx:id="originalCol2" editable="false" prefWidth="75.14111328125" sortable="false" style="-fx-font-family: Verdana; -fx-font-size: 14px;" text="Original" />
+                        <TableColumn fx:id="revisedCol2" editable="false" prefWidth="88.63623046875" sortable="false" style="-fx-font-family: Verdana; -fx-font-size: 14px;" text="Revised" />
+                     </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="16.0" prefHeight="42.0" prefWidth="268.0" text="CALCULATION">
+                     <font>
+                        <Font name="Verdana Bold" size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="resaInfo" layoutX="2.0" layoutY="459.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="14.0" style="-fx-background-radius: 20px; -fx-label-padding: 0.3px;" text="?">
+                     <font>
+                        <Font name="Verdana" size="8.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="newToraLabel11" layoutX="32.0" layoutY="456.0" text="Resa (m)                = ">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="resaTextField" disable="true" layoutX="195.0" layoutY="447.0" onAction="#setRESA" prefHeight="31.0" prefWidth="80.0" text="0">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="oldToraInfo" layoutX="2.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="17.0" style="-fx-background-radius: 20px; -fx-label-padding: 0.3px;" text="?" visible="false">
+                     <font>
+                        <Font name="Verdana" size="8.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="oldTodaInfo" layoutX="2.0" layoutY="134.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" style="-fx-background-radius: 20px; -fx-label-padding: 0.3px;" text="?" visible="false">
+                     <font>
+                        <Font name="Verdana" size="8.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="oldAsdaInfo" layoutX="2.0" layoutY="160.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" style="-fx-background-radius: 20px; -fx-label-padding: 0.3px;" text="?" visible="false">
+                     <font>
+                        <Font name="Verdana" size="8.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="oldLdaInfo" layoutX="2.0" layoutY="184.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0" style="-fx-background-radius: 20px; -fx-label-padding: 0.3px;" text="?" visible="false">
+                     <font>
+                        <Font name="Verdana" size="8.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="oldToraInfoLabel" layoutX="27.0" layoutY="130.0" prefHeight="208.0" prefWidth="245.0" style="-fx-background-color: white; -fx-border-color: black;" text="Take-Off Run Available - the length of the runway available for take-off. This is the total distance from the point where an aircraft can commence its take-off to the point where the runway can no loger support the weight of the aircraft under normal conditions (and where it should have left the runway during a normal take-off)." textAlignment="JUSTIFY" visible="false" wrapText="true">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="oldTodaInfoLabel" layoutX="27.0" layoutY="153.0" prefHeight="186.0" prefWidth="245.0" style="-fx-background-color: white; -fx-border-color: black;" text="Take-Off Distance Available (TODA) - the length of the runway (TORA) plus any Clearway (area beyond the runway that is considered free from obstructions). This is the total distance an aircraft can safely utilise for its take-off and initial ascent." textAlignment="JUSTIFY" visible="false" wrapText="true">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="oldAsdaInfoLabel" layoutX="27.0" layoutY="185.0" prefHeight="175.0" prefWidth="245.0" style="-fx-background-color: white; -fx-border-color: black;" text="Accelerate-Stop Distance Available (ASDA) - the length of the runway (TORA) plus any Stopway (area that is not part of the TORA, but that can be used to safely stop an aircraft in an emergency). This is the total distance available to the aircraft in case of an aborted take-off." textAlignment="JUSTIFY" visible="false" wrapText="true">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="oldLdaInfoLabel" layoutX="27.0" layoutY="203.0" prefHeight="186.0" prefWidth="245.0" style="-fx-background-color: white; -fx-border-color: black;" text="Landing Distance Available (LDA) - the length of the runway available for landing. The start of this is called the threshold and is typically the same as the start of the TORA. A threshold may be displaced for operational reasons or because of a temporary obstacle, in which case LDA and TORA can differ." textAlignment="JUSTIFY" visible="false" wrapText="true">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="resaInfoLabel" layoutX="24.0" layoutY="457.0" prefHeight="179.0" prefWidth="218.0" style="-fx-background-color: white; -fx-border-color: black;" text="Runway End Safety Area (RESA) - An area symmetrical about the extended runway centreline and adjacent to the end of the strip primarily intended to reduce the risk of damage to an aircraft undershooting or overrunning the runway." textAlignment="JUSTIFY" visible="false" wrapText="true">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stripEndInfoLabel" layoutX="27.0" layoutY="495.0" prefHeight="86.0" prefWidth="218.0" style="-fx-background-color: white; -fx-border-color: black;" text="Strip end - An area between the end of runway and the end of the runway strip." textAlignment="JUSTIFY" visible="false" wrapText="true">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="blastProtectionInfoLabel" layoutX="28.0" layoutY="514.0" prefHeight="133.0" prefWidth="218.0" style="-fx-background-color: white; -fx-border-color: black;" text="Blast protection - A safety area behind an aircraft to prevent the engine blast from affecting any obstacles located behind it." textAlignment="JUSTIFY" visible="false" wrapText="true">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Verdana" size="13.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </items>
+      </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="1400.0" spacing="5.0" VBox.vgrow="NEVER">
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+         </children>
+    </HBox>
+      <Label fx:id="notificationLabel" prefHeight="37.0" prefWidth="1400.0" style="-fx-text-fill: grey;" text="Status">
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Label>
+  </children>
+</VBox>
