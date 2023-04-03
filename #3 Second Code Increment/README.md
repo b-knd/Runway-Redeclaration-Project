@@ -5,12 +5,13 @@ This project is designed to calculate the new runway parameters based on the use
 ## Dependencies
 
 This project requires JavaFX to run. Please ensure that JavaFX is installed on your computer before running the application.
+You may download JavaFX component [here](https://gluonhq.com/products/javafx/).
 
 ## How to Run
 
 1. Open a terminal or command prompt and type `java -version` to check if Java is installed on your computer. If Java is not installed, please install it before proceeding.
 
-2. Download and decompress the zip file, navigate to the folder containing the `RunwayRedeclaration.jar` file. (it is in the src folder)
+2. Download and decompress the zip file, navigate to the folder containing the `RunwayRedeclaration.jar` file. (it is in the 'code' folder)
 
 3. Type the following command to run the application:
 
@@ -24,4 +25,4 @@ This project requires JavaFX to run. Please ensure that JavaFX is installed on y
 
 Once the application is launched, you will see a form on the left hand side that you need to fill out either by selecting options or typing in values. Some menus have been disabled to ensure that the required information is selected before proceeding. Once all fields are completed, click on the "Perform Calculation" button to calculate the new runway parameters. 
 
-The calculated results will be displayed at the right side of the interface, in the form of table and calculation breakdown. Visualisation will also be displayed in the middle of the interface, with tabs to navigate between the two types of views.
+The calculated results will be displayed at the right side of the interface, in the form of table and calculation breakdown. Visualisation will also be displayed in the middle of the interface, with tabs to navigate between the three types of views, namely top-down, side-on and simultaneous views.
