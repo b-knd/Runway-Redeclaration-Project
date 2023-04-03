@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="479.0" prefWidth="334.0" style="-fx-background-color: #212f45;" stylesheets="@CSS/LoginStyleSheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+    <children>
+        <AnchorPane layoutY="435.0" prefHeight="50.0" prefWidth="338.0" style="-fx-background-color: #57cc99;">
+         <children>
+            <Button layoutY="-4.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="338.0" styleClass="loginButton" stylesheets="@CSS/LoginStyleSheet.css" text="Log In" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+        </AnchorPane>
+        <AnchorPane layoutX="4.0" layoutY="1.0" prefHeight="43.0" prefWidth="325.0">
+            <children>
+                <Label fx:id="title" layoutX="53.0" layoutY="27.0" prefHeight="30.0" prefWidth="228.0" styleClass="text" stylesheets="@CSS/LoginStyleSheet.css" text="Runway Redeclaration" textFill="#dadada">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="124.0" fitWidth="149.0" layoutX="99.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
+        <AnchorPane fx:id="userPane" layoutX="16.0" layoutY="246.0" prefHeight="48.0" prefWidth="308.0" styleClass="anchorPanesStyle" stylesheets="@CSS/LoginStyleSheet.css">
+         <children>
+            <TextField layoutX="46.0" layoutY="10.0" prefHeight="29.0" prefWidth="247.0" promptText="username" styleClass="textPrompt" stylesheets="@CSS/LoginStyleSheet.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@userIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+        </AnchorPane>
+        <AnchorPane fx:id="passwordPane" layoutX="16.0" layoutY="320.0" prefHeight="48.0" prefWidth="308.0" styleClass="anchorPanesStyle" stylesheets="@CSS/LoginStyleSheet.css">
+         <children>
+            <PasswordField layoutX="14.0" layoutY="12.0" prefHeight="26.0" prefWidth="278.0" promptText="password" styleClass="textPrompt" stylesheets="@CSS/LoginStyleSheet.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+         </children>
+        </AnchorPane>
+      <ImageView fx:id="airplaneLogo" fitHeight="92.0" fitWidth="94.0" layoutX="124.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@airplaneLogo.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

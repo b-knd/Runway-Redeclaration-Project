@@ -1,0 +1,24 @@
+.textPrompt{
+-fx-background-color:  #212f45;
+-fx-prompt-text-fill: #dadada;
+-fx-background-radius: 30px;
+-fx-text-inner-color: #dadada;
+}
+
+.anchorPanesStyle{
+-fx-background-radius: 30px;
+-fx-border-radius: 30px;
+-fx-background-color:  #212f45;
+}
+
+.loginButton{
+-fx-background-color: #02c39a;
+}
+
+.loginButton:hover{
+-fx-background-color: #6a994e;
+}
+
+.text{
+-fx-text-fill: #dadada;
+}
