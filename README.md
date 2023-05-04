@@ -11,4 +11,4 @@ The calculated results will be displayed at the right side of the interface, in 
 Please refer to User Guide for more detailed explanation. Application demo is available here: https://youtu.be/R-0Q2KT8cWA.
 
 # More Info
-Each folder in this repository contains documentation and increment code for the project. Folder RunwayRedeclaration is the actual project repository with the latest version of code. 
+Each folder in this repository contains documentation and increment code for the project. Submodule Project_Repository contains the  latest project source code.
