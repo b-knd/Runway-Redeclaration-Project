@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="166.0" prefWidth="311.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="9.0" prefHeight="159.0" prefWidth="394.0" style="-fx-background-color: #d3d3d3#d3d3d3;">
+         <children>
+            <Label layoutX="10.0" layoutY="7.0" prefHeight="17.0" prefWidth="251.0" text="Version 4.1   -   23/04/2023 (Last updated)">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="37.0" prefHeight="17.0" prefWidth="171.0" text="Runway Redeclaration">
+               <font>
+                  <Font name="Roboto Medium" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="60.0" prefHeight="17.0" prefWidth="171.0" text="Copyright (c) 2023 Group 1" textFill="#686868" />
+            <Label layoutX="10.0" layoutY="76.0" prefHeight="17.0" prefWidth="171.0" text="All rights reserved." textFill="#686868" />
+            <Label layoutX="10.0" layoutY="106.0" prefHeight="17.0" prefWidth="378.0" text="Redistribution and use in any source and binary forms, with or without" textFill="#686868" />
+            <Label layoutX="10.0" layoutY="120.0" prefHeight="17.0" prefWidth="297.0" text="modification, are not permitted." textFill="#686868" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

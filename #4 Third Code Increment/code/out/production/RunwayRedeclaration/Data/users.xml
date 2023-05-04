@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><users>
+  <user>
+    <username>atc</username>
+    <name>Air Traffic Controller</name>
+    <password>9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0</password>
+    <airportID>LHR</airportID>
+    <role>3</role>
+  </user>
+  <user>
+    <username>manager</username>
+    <name>Manager</name>
+    <password>7e11cbb28f0d1f3bb8c7256885e378f94f16502031abdddb4555ace25d39b64a</password>
+    <airportID>LHR</airportID>
+    <role>2</role>
+  </user>
+  <user>
+    <username>jingru</username>
+    <name>Jing Ru</name>
+    <password>7e11cbb28f0d1f3bb8c7256885e378f94f16502031abdddb4555ace25d39b64a</password>
+    <airportID>DUM</airportID>
+    <role>2</role>
+  </user>
+  <user>
+    <username>admin</username>
+    <name>Admin</name>
+    <password>9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0</password>
+    <airportID>0</airportID>
+    <role>1</role>
+  </user>
+</users>
