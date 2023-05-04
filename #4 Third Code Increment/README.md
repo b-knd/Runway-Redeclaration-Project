@@ -4,7 +4,7 @@ This project is designed to calculate the new runway parameters based on the use
 
 ## Dependencies
 
-This project requires JavaFX to run. Please ensure that JavaFX is installed on your computer before running the application.
+The application requires JavaFX to run. Please ensure that JavaFX is installed on your computer before running the application.
 You may download JavaFX component [here](https://gluonhq.com/products/javafx/).
 
 ## How to Run
