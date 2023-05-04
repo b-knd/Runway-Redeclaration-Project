@@ -10,21 +10,5 @@ The calculated results will be displayed at the right side of the interface, in 
 
 Please refer to User Guide for more detailed explanation. Application demo is available here: https://youtu.be/R-0Q2KT8cWA.
 
-## Dependencies
-
-The application requires JavaFX to run. Please ensure that JavaFX is installed on your computer before running the application.
-You may download JavaFX component [here](https://gluonhq.com/products/javafx/).
-
-## How to Run
-
-1. Open a terminal or command prompt and type `java -version` to check if Java is installed on your computer. If Java is not installed, please install it before proceeding.
-
-2. Download and decompress the zip file, navigate to the folder containing the `RunwayRedeclaration.jar` file. (it is in the 'code' folder)
-
-3. Type the following command to run the application:
-
-   `java --module-path /path/to/javafx/lib --add-modules=javafx.controls,javafx.fxml,javafx.graphics -jar RunwayRedeclaration.jar`
-
-   Replace `/path/to/javafx/lib` with the path to the directory containing the JavaFX runtime components on your system. This path will depend on the location where you installed JavaFX on your computer.
-
-4. Press Enter to run the command. The application should launch and you can now input the required data for runway redeclaration.
+# More Info
+Each folder in this repository contains documentation and increment code for the project. Folder RunwayRedeclaration is the actual project repository with the latest version of code. 
