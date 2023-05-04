@@ -27,4 +27,4 @@ Once the application is launched, you will see a form on the left hand side that
 
 The calculated results will be displayed at the right side of the interface, in the form of table and calculation breakdown. Visualisation will also be displayed in the middle of the interface, with tabs to navigate between the three types of views, namely top-down, side-on and simultaneous views.
 
-Refer to User Guide and Report for more detailed explanation.
+Please refer to User Guide for more detailed explanation. Application demo is available here: https://youtu.be/R-0Q2KT8cWA.
