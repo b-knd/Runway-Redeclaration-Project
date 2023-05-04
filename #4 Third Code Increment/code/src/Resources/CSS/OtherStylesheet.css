@@ -1,0 +1,10 @@
+.notification > .pane {
+    -fx-font-family: Verdana;
+    -fx-background-color: #212f45;
+    -fx-padding: 20px;
+}
+
+.notification  > .pane .label {
+    -fx-text-fill: white;
+    -fx-line-spacing: 5px;
+}

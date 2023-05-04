@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AirportManagerController">
+    <children>
+        <MenuBar prefHeight="28.0" prefWidth="1400.0">
+            <menus>
+                <Menu mnemonicParsing="false" style="-fx-font-family: Verdana;" text="File">
+                    <items>
+                        <MenuItem fx:id="logoutItem" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+                    </items>
+                </Menu>
+            <Menu mnemonicParsing="false" style="-fx-font-family: Verdana;" text="Go">
+               <items>
+                  <MenuItem fx:id="backToMain" mnemonicParsing="false" onAction="#backToMain" text="Back to Main" />
+                  <MenuItem fx:id="userManager" mnemonicParsing="false" onAction="#goUserManager" text="Manage User Accounts" />
+               </items>
+            </Menu>
+                <Menu mnemonicParsing="false" style="-fx-font-family: Verdana;" text="Info">
+                    <items>
+                        <MenuItem fx:id="aboutProject" mnemonicParsing="false" onAction="#loadAboutProject" text="About Runway Project" />
+                  <MenuItem fx:id="copyright" mnemonicParsing="false" onAction="#loadCopyright" text="Version and Copyright Information" />
+                  <MenuItem fx:id="userGuide" mnemonicParsing="false" onAction="#downloadUserGuide" text="Download User Guide" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <HBox layoutY="28.0" prefHeight="67.0" prefWidth="1400.0" styleClass="title-pane">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="20.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="69.0" style="-fx-border-color: white; -fx-border-width: 1px; -fx-border-style: solid; -fx-border-radius: 50; -fx-background-color: rgb(244,244,244); -fx-background-radius: 50;" />
+                  <Button fx:id="modeButtonManager" layoutX="24.0" layoutY="19.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#changeMode" prefHeight="32.0" prefWidth="61.0" scaleY="-1.0" style="-fx-border-radius: 50; -fx-background-color: rgb(149,195,240); -fx-background-radius: 50;" />
+                  <ImageView fx:id="darkModePng" fitHeight="27.0" fitWidth="32.0" layoutX="25.0" layoutY="20.0" onMouseClicked="#changeMode" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/moon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="lightModePng" fitHeight="61.0" fitWidth="61.0" layoutX="40.0" layoutY="6.0" onMouseClicked="#changeMode" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/sun.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label alignment="CENTER" layoutY="28.0" prefHeight="72.0" prefWidth="959.0" text="MANAGE AIRPORT" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="25.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="380.0" right="198.0" top="20.0" />
+               </padding>
+            </Label>
+            <Label fx:id="identityLabel" alignment="CENTER_RIGHT" prefHeight="67.0" prefWidth="263.0" textFill="WHITE">
+               <padding>
+                  <Insets bottom="15.0" right="25.0" top="15.0" />
+               </padding>
+               <font>
+                  <Font name="Verdana" size="13.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="67.0" prefWidth="161.0">
+               <children>
+                  <Button fx:id="logoutButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleLogout" prefHeight="36.0" prefWidth="102.0" styleClass="logoutButton" stylesheets="@../CSS/MainStylesheet.css" text="LOGOUT" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="20.0" top="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Verdana Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+        <SplitPane layoutY="97.0" prefHeight="682.0" prefWidth="1400.0" styleClass="pane">
+            <items>
+                <AnchorPane fx:id="backgroundPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="1400.0" styleClass="pane">
+                    <children>
+                        <TableView fx:id="airportTable" layoutX="326.0" layoutY="18.0" prefHeight="637.0" prefWidth="741.0" style="-fx-font-family: Verdana;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="326.0" AnchorPane.rightAnchor="331.0" AnchorPane.topAnchor="18.0">
+                            <columns>
+                                <TableColumn fx:id="IDCol" prefWidth="75.0" style="-fx-padding: 7; -fx-alignment: CENTER-LEFT;" text="ID" />
+                                <TableColumn fx:id="nameCol" prefWidth="335.9877624511719" style="-fx-padding: 7; -fx-alignment: CENTER-LEFT;" text="NAME" />
+                                <TableColumn fx:id="managerCol" minWidth="0.0" prefWidth="329.0122375488281" style="-fx-padding: 7; -fx-alignment: CENTER-LEFT;" text="MANAGER" />
+                            </columns>
+                        </TableView>
+                        <Label fx:id="addNewAirport" alignment="CENTER" layoutX="48.0" layoutY="138.0" prefHeight="42.0" prefWidth="220.0" styleClass="common-text" text="ADD NEW AIRPORT">
+                            <font>
+                                <Font name="Verdana Bold" size="16.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="5.0" top="5.0" />
+                            </padding>
+                        </Label>
+                        <Button fx:id="importAirportButton" layoutX="27.0" layoutY="201.0" mnemonicParsing="false" onAction="#importAirport" prefHeight="35.0" prefWidth="275.0" styleClass="functionButton" text="Choose File">
+                            <font>
+                                <Font name="Verdana" size="16.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="manageAirport" alignment="CENTER" layoutX="48.0" layoutY="261.0" prefHeight="42.0" prefWidth="220.0" styleClass="common-text" text="MANAGE AIRPORTS">
+                            <font>
+                                <Font name="Verdana Bold" size="16.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="5.0" top="5.0" />
+                            </padding>
+                        </Label>
+                        <Button fx:id="deleteAirportButton" layoutX="27.0" layoutY="322.0" mnemonicParsing="false" onAction="#deleteAirport" prefHeight="35.0" prefWidth="275.0" styleClass="functionButton" text="Delete Selected Airport">
+                            <font>
+                                <Font name="Verdana" size="16.0" />
+                            </font>
+                        </Button>
+                        <TextArea fx:id="airportDetails" editable="false" layoutX="1096.0" layoutY="88.0" prefHeight="366.0" prefWidth="275.0" wrapText="true">
+                     <font>
+                        <Font name="Verdana" size="13.0" />
+                     </font></TextArea>
+                        <Label fx:id="airDetails" alignment="CENTER" layoutX="1128.0" layoutY="28.0" prefHeight="42.0" prefWidth="220.0" styleClass="common-text" text="AIRPORT DETAILS">
+                            <font>
+                                <Font name="Verdana Bold" size="16.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="5.0" top="5.0" />
+                            </padding>
+                        </Label>
+                        <Button fx:id="editAirportButton" layoutX="1096.0" layoutY="482.0" mnemonicParsing="false" onAction="#editAirport" prefHeight="35.0" prefWidth="275.0" styleClass="functionButton" text="Edit Selected Airport Details">
+                            <font>
+                                <Font name="Verdana" size="16.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="exportAirportDetails" layoutX="1096.0" layoutY="542.0" mnemonicParsing="false" onAction="#exportAirport" prefHeight="35.0" prefWidth="275.0" styleClass="functionButton" text="Export Selected Airport Details">
+                            <font>
+                                <Font name="Verdana" size="16.0" />
+                            </font>
+                        </Button>
+                        <TextField fx:id="searchField" layoutX="27.0" layoutY="69.0" prefHeight="40.0" prefWidth="275.0" promptText="Search Airport">
+                            <font>
+                                <Font name="Verdana" size="16.0" />
+                            </font>
+                        </TextField>
+                  <Button fx:id="exportAllAirport" layoutX="1096.0" layoutY="602.0" mnemonicParsing="false" onAction="#exportAllAirport" prefHeight="35.0" prefWidth="275.0" styleClass="functionButton" text="Export All Airport Details">
+                     <font>
+                        <Font name="Verdana" size="16.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

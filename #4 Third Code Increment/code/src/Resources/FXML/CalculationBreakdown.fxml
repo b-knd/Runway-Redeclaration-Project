@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="477.0" style="-fx-background-color: rgb(244,244,244);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Helper.CalculationBreakdownController">
+   <children>
+      <TabPane fx:id="breakdownPane" layoutX="34.0" layoutY="145.0" prefHeight="174.0" prefWidth="410.0" style="-fx-border-color: rgb(200, 200, 200);" styleClass="visual" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="toraTab" style="-fx-font-family: Verdana;" text="TORA">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="142.0" prefWidth="410.0">
+                           <children>
+                              <Label fx:id="toraBreakdown" alignment="CENTER" prefHeight="141.0" prefWidth="410.0" text="Label" wrapText="true">
+                                 <font>
+                                    <Font name="Verdana" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+          <Tab fx:id="todaTab" style="-fx-font-family: Verdana;" text="TODA">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="133.0" prefWidth="410.0">
+                           <children>
+                              <Label fx:id="todaBreakdown" alignment="CENTER" prefHeight="141.0" prefWidth="410.0" text="Label" wrapText="true">
+                                 <font>
+                                    <Font name="Verdana" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+            <Tab fx:id="asdaTab" style="-fx-font-family: Verdana;" text="ASDA">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="142.0" prefWidth="376.0">
+                           <children>
+                              <Label fx:id="asdaBreakdown" alignment="CENTER" prefHeight="141.0" prefWidth="410.0" text="Label" wrapText="true">
+                                 <font>
+                                    <Font name="Verdana" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+            <Tab fx:id="ldaTab" style="-fx-font-family: Verdana;" text="LDA">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="142.0" prefWidth="376.0">
+                           <children>
+                              <Label fx:id="ldaBreakdown" alignment="CENTER" prefHeight="141.0" prefWidth="410.0" text="Label" wrapText="true">
+                                 <font>
+                                    <Font name="Verdana" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="37.0" layoutY="31.0" text="RESA">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="56.0" text="Strip end">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="81.0" text="Blast protection">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="resa" layoutX="164.0" layoutY="31.0" text="Label">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="stripEnd" layoutX="164.0" layoutY="56.0" text="Label">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="blastProtection" layoutX="164.0" layoutY="81.0" text="Label">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="breakdownPane1" layoutX="34.0" layoutY="361.0" prefHeight="174.0" prefWidth="410.0" style="-fx-border-color: rgb(200, 200, 200);" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="toraTab1" style="-fx-font-family: Verdana;" text="TORA">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="142.0" prefWidth="410.0">
+                           <children>
+                              <Label fx:id="toraBreakdown1" alignment="CENTER" prefHeight="141.0" prefWidth="410.0" text="Label" wrapText="true">
+                                 <font>
+                                    <Font name="Verdana" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="todaTab1" style="-fx-font-family: Verdana;" text="TODA">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="142.0" prefWidth="376.0">
+                           <children>
+                              <Label fx:id="todaBreakdown1" alignment="CENTER" prefHeight="141.0" prefWidth="410.0" text="Label" wrapText="true">
+                                 <font>
+                                    <Font name="Verdana" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="asdaTab1" style="-fx-font-family: Verdana;" text="ASDA">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="142.0" prefWidth="376.0">
+                           <children>
+                              <Label fx:id="asdaBreakdown1" alignment="CENTER" prefHeight="141.0" prefWidth="410.0" text="Label" wrapText="true">
+                                 <font>
+                                    <Font name="Verdana" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="ldaTab1" style="-fx-font-family: Verdana;" text="LDA">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="142.0" prefWidth="376.0">
+                           <children>
+                              <Label fx:id="ldaBreakdown1" alignment="CENTER" prefHeight="141.0" prefWidth="410.0" text="Label" wrapText="true">
+                                 <font>
+                                    <Font name="Verdana" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label fx:id="leftDesignator" layoutX="40.0" layoutY="113.0" text="09L">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="rightDesignator" layoutX="40.0" layoutY="333.0" text="27R">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
