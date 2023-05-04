@@ -1,3 +1,3 @@
 [submodule "Project_Repository"]
-    path = Project_Repository
-    url = https://github.com/b-knd/RunwayProject.git
+	path = Project_Repository
+	url = git@github.com:b-knd/RunwayProject.git
