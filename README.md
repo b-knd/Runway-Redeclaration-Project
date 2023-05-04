@@ -11,4 +11,4 @@ The calculated results will be displayed at the right side of the interface, in 
 Please refer to User Guide for more detailed explanation. Application demo is available here: https://youtu.be/R-0Q2KT8cWA.
 
 # More Info
-Each folder in this repository contains documentation and increment code for the project. Submodule Project_Repository contains the  latest project source code.
+Each folder in this repository contains documentation and increment code for the project. Submodule Project_Repository is forked from the actual project repository for the group project.
