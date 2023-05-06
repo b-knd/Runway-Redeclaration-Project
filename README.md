@@ -1,4 +1,4 @@
-![cover page (2)](https://github.com/b-knd/misc-codes/blob/main/media/Bits%20of%20History.jpg)
+<img src="https://github.com/b-knd/misc-codes/blob/main/media/Bits%20of%20History.jpg" alt="image_description" width="1000"/>
 
 # Runway Redeclaration Project
 
