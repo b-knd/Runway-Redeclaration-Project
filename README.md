@@ -12,7 +12,7 @@
 
 This tool is designed to perform runway redeclaration for UK commercial airports using calculations and process sprcified by the CAA. Given standard runway information and information about an obstacle, the tool will provide the revised runway parameters together with a visualisation of the obstacle and a summary of the calculations. 
 
-Some basic functionalities of the system:
+**Some basic functionalities of the system:**
 - Perform calculations to redeclare runway parameters
   - View calculation breakdowns
   - View result as graphical visualisations (top-down, side-on and simultaneous view)
