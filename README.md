@@ -1,14 +1,41 @@
-# Runway-Redeclaration-Project
-- University of Southampton Malaysia
-- COMP2211 Software Engineering Group Project
+![cover page (2)](https://github.com/b-knd/misc-codes/blob/main/media/Bits%20of%20History.jpg)
+
+# Runway Redeclaration Project
+
+**Group Number**: Group 1 
+
+**Languages**: JAVA, XML 
+
+**Module**: COMP2211 Software Engineering Group Project
 
 # About the Application
 
-This application is designed to perform runway redeclaration for UK commercial airports. Once the application is launched, you will see a form on the left hand side that you need to fill out either by selecting options or typing in values. Some menus have been disabled to ensure that the required information is selected before proceeding. Once all fields are completed, click on the "Perform Calculation" button to calculate the new runway parameters. 
+This tool is designed to perform runway redeclaration for UK commercial airports using calculations and process sprcified by the CAA. Given standard runway information and information about an obstacle, the tool will provide the revised runway parameters together with a visualisation of the obstacle and a summary of the calculations. 
 
-The calculated results will be displayed at the right side of the interface, in the form of table and calculation breakdown. Visualisation will also be displayed in the middle of the interface, with tabs to navigate between the three types of views, namely top-down, side-on and simultaneous views.
+Some basic functionalities of the system:
+- Perform calculations to redeclare runway parameters
+  - View calculation breakdowns
+  - View result as graphical visualisations (top-down, side-on and simultaneous view)
+  - Generate redeclaration report
+- Import and export airport data (UK commercial airport)
+- Manage users for the system
 
-Please refer to User Guide for more detailed explanation. Application demo is available here: https://youtu.be/R-0Q2KT8cWA.
+## Running the Application
+
+The application requires JavaFX to run. Please ensure that JavaFX is installed on your computer before running the application.
+You may download JavaFX component [here](https://gluonhq.com/products/javafx/).
+
+1. Navigate to the Project_Repository and download the zip, decompress the zip file and navigate to the folder containing the `RunwayRedeclaration.jar` file.
+
+2. Open a terminal or command prompt and type `java -version` to check if Java is installed on your computer. If Java is not installed, please install it before proceeding.
+
+3. Type the following command to run the application:
+
+   `java --module-path /path/to/javafx/lib --add-modules=javafx.controls,javafx.fxml,javafx.graphics -jar RunwayRedeclaration.jar`
+
+   Replace `/path/to/javafx/lib` with the path to the directory containing the JavaFX runtime components on your system. This path will depend on the location where you installed JavaFX on your computer.
+
+4. The application should now launch and you can input the required data for runway redeclaration.
 
 # More Info
 Each folder in this repository contains documentation and incremental codes for the project. Submodule Project_Repository is forked from the actual project repository for the group project.
